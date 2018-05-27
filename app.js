@@ -1,54 +1,36 @@
-// REPLACE ELEMENT
+// document.querySelector('.clear-tasks').addEventListener('click',
+//     function(evt) {
+//         evt.preventDefault();
+//         console.log('Hello World');
+//     });
 
-// Create element
-const newHeading = document.createElement('h2');
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
-// Add id
-newHeading.id = 'task-title';
+function onClick(evt) {
+    evt.preventDefault();
+    let val;
+    val = evt;
 
-// New text node
-newHeading.appendChild(document.createTextNode('Task List'));
+    // Event target element
+    val = evt.target;
+    val = evt.target.id;
+    val = evt.target.className;
+    val = evt.target.classList;
+    evt.target.innerText = 'Hello';
 
-// Get the old heading
-const oldHeading = document.getElementById('task-title')
+    // Event type
+    val = evt.type;
 
-// Parent
-const cardAction = document.querySelector('.card-action');
+    // Timestamp
+    val = evt.timeStamp;
 
-// Replace
-cardAction.replaceChild(newHeading, oldHeading);
+    // Coords event relative to window
+    val = evt.clientY;
+    val = evt.clientX;
 
-console.log(newHeading);
+    // Coords event relative to the element
+    val = evt.offsetY;
+    val = evt.offsetX;
 
-// REMOVE ELEMENT
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
-
-// Remove list item
-lis[0].remove();
-
-// Remove child element
-list.removeChild(lis[3]);
-
-// CLASSES AND ATTRIBUTES
-const firstLi = document.querySelector('li:first-child');
-const link = firstLi.children[0];
-
-let val;
-
-// Classes
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
-val = link;
-
-// Attribute
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('href');
-link.removeAttribute('title');
-val = link;
-console.log(val);
+    console.log(val);
+}
