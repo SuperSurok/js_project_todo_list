@@ -5,36 +5,34 @@ const heading = document.querySelector('h5');
 // Clear input
 taskInput.value = '';
 
-// form.addEventListener('submit', runEvent);
+form.addEventListener('submit', runEvent);
 
 // Keydown
-// taskInput.addEventListener('keydown', runEvent);
+taskInput.addEventListener('keydown', runEvent);
 
 // Keydup
-// taskInput.addEventListener('keyup', runEvent);
+taskInput.addEventListener('keyup', runEvent);
 
 // Keypess
-// taskInput.addEventListener('keyperss', runEvent);
+taskInput.addEventListener('keyperss', runEvent);
 
 // Focus
-// taskInput.addEventListener('focus', runEvent);
+taskInput.addEventListener('focus', runEvent);
 
 // Blur
-// taskInput.addEventListener('blur', runEvent);
+taskInput.addEventListener('blur', runEvent);
 
 // Cut
-// taskInput.addEventListener('cut', runEvent);
+taskInput.addEventListener('cut', runEvent);
 
 // Paste
-// taskInput.addEventListener('paste', runEvent);
+taskInput.addEventListener('paste', runEvent);
 
 // Input
-// taskInput.addEventListener('input', runEvent);
+taskInput.addEventListener('input', runEvent);
 
 // Change
 taskInput.addEventListener('change', runEvent);
-
-
 
 
 function runEvent(evt) {

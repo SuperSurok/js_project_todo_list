@@ -2,29 +2,29 @@ const clearBtn = document.querySelector('.clear-tasks');
 const card = document.querySelector('.card');
 const heading = document.querySelector('h5');
 
-// // Click
-// clearBtn.addEventListener('click', runEvent);
+// Click
+clearBtn.addEventListener('click', runEvent);
 
-// // Dubleclick
-// clearBtn.addEventListener('dbclick', runEvent);
+// Dubleclick
+clearBtn.addEventListener('dbclick', runEvent);
 
-// // Mousedown
-// clearBtn.addEventListener('mousedown', runEvent);
+// Mousedown
+clearBtn.addEventListener('mousedown', runEvent);
 
-// // Mouseup
-// clearBtn.addEventListener('mouseup', runEvent);
+// Mouseup
+clearBtn.addEventListener('mouseup', runEvent);
 
-// // Mouseenter
-// card.addEventListener('mouseenter', runEvent);
+// Mouseenter
+card.addEventListener('mouseenter', runEvent);
 
-// // Mouseleave
-// card.addEventListener('mouseleave', runEvent);
+// Mouseleave
+card.addEventListener('mouseleave', runEvent);
 
-// // Mouseover
-// card.addEventListener('mouseleave', runEvent);
+// Mouseover
+card.addEventListener('mouseleave', runEvent);
 
-// // Mouseout
-// card.addEventListener('mouseout', runEvent);
+// Mouseout
+card.addEventListener('mouseout', runEvent);
 
 // Mousemove
 card.addEventListener('mousemove', runEvent);
