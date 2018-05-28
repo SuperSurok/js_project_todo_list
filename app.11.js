@@ -20,6 +20,7 @@ document.querySelector('form').addEventListener('submit', function(evt) {
     evt.preventDefault();
     const task = document.getElementById('task').value;
     let tasks;
+
     if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
