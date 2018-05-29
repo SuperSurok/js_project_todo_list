@@ -1,39 +1,42 @@
-// Set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '36');
+// Define UI Vars
+const form = document.querySelector('#task-form');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const filter = document.querySelector('#filter');
+const taskInput = document.querySelector('#task');
 
-// Set session storage item
-// sessionStorage.setItem('name', 'Marta');
+// Load all event listeners
+loadEventListeners();
 
-// Remove from local storage
-// localStorage.removeItem('name', 'John');
+// Load all event listeners
+function loadEventListeners() {
+    // Add task event
+    form.addEventListener('submit', addTask);
+};
 
-// Get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
-
-// // Clear local storage
-// localStorage.clear();
-// console.log(name, age);
-
-document.querySelector('form').addEventListener('submit', function(evt) {
+// Add task
+function addTask(evt) {
     evt.preventDefault();
-    const task = document.getElementById('task').value;
-    let tasks;
-    if (localStorage.getItem('tasks') === null) {
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (taskInput.value === '') {
+        alert('Add a task')
     }
-
-    tasks.push(task);
-
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    alert('Task saved');
-});
-
-const tasks = JSON.parse(localStorage.getItem('tasks'));
-tasks.forEach(task => {
-    console.log(task);
-});
+    // Create li element
+    const li = document.createElement('li');
+    // Add class
+    li.className = 'collection-item';
+    // Create text node and append to li
+    li.appendChild(document.createTextNode(taskInput.value));
+    // Create new link element
+    const link = document.createElement('a');
+    // Add class
+    link.className = 'delete-item secondary-content';
+    // Add icon html
+    link.innerHTML = '<i class="fa fa-remove"></i>'
+        // Append the link to li
+    li.appendChild(link);
+    // Append li to ul
+    taskList.appendChild(li);
+    // Clear input
+    taskInput.value = '';
+    console.log(li);
+}
